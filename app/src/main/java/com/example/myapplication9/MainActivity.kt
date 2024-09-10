@@ -1,5 +1,6 @@
 package com.example.myapplication9
 
+import android.content.Context
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.TextView
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        getSharedPreferences("WEB_HISTORY", Context.MODE_PRIVATE)
 
         binding.viewPager.adapter = ViewPagerAdapter(this)
 
